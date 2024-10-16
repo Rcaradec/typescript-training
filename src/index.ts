@@ -27,3 +27,17 @@ const enum Size {
 // exemple of utilization
 let mySize: Size = Size.Medium;
 console.log(mySize);
+
+//? Functions
+// always type params and return value
+
+function calculateTax(income: number, taxYear = 2022): number {
+  if (taxYear < 2022) return income * 1.2;
+  return income * 1.3;
+}
+calculateTax(10_000);
+
+// in tsconfig use these options :
+// noUnusedLocales -> alert if some variables aren't used
+// noUnusedParameters -> Raise an error when a function parameter isn't read
+// noImplicitReturns -> alert if some cases return undefined
