@@ -41,3 +41,20 @@ calculateTax(10_000);
 // noUnusedLocales -> alert if some variables aren't used
 // noUnusedParameters -> Raise an error when a function parameter isn't read
 // noImplicitReturns -> alert if some cases return undefined
+
+//? object
+type Employee = {
+  readonly id: number;
+  name: string;
+  retire: (date: Date) => void;
+};
+
+// you can use readonly in for preventing modification of the value of the property
+let employee: Employee = {
+  id: 1,
+  name: "",
+  retire: (date: Date) => console.log(date),
+};
+employee.name = "Maurice";
+
+console.log("employee", employee);
