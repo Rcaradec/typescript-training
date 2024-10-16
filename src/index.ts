@@ -1,5 +1,29 @@
-let age: number = 20;
-if (age < 50) {
-  age += 10;
+let sales = 123_456_789;
+let course = "Typescript";
+let is_published = true;
+
+let level;
+level = 1;
+
+//? Tuples
+// The good practice is to limit tuples to two values
+let user: [number, string] = [3, "Rem"];
+
+//? Enum
+// regular declaration
+const small = 1;
+const medium = 2;
+const large = 3;
+
+// is equivalent to
+const enum Size {
+  Small = 1,
+  Medium,
+  Large,
 }
-console.log(age);
+// Don't forget to use const before enum
+// in order for TS Compiler to generate a more optimized code for index.js in /dist
+
+// exemple of utilization
+let mySize: Size = Size.Medium;
+console.log(mySize);
