@@ -58,3 +58,14 @@ let employee: Employee = {
 employee.name = "Maurice";
 
 console.log("employee", employee);
+
+//? Union Types
+// we can specify what type the param can be
+// but we have to handle each case (and benefit from the code completion depending of the type) -> Narrowing
+function kgToLbs(weight: number | string): number {
+  //Narrowing
+  if (typeof weight === "number") return weight * 2.2;
+  else return parseInt(weight) * 2.2;
+}
+kgToLbs(10);
+kgToLbs("10kg");
