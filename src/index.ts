@@ -89,8 +89,18 @@ let textBox: UIWidget = {
 
 //? Literal
 // literal means Exact, Specific
-type Quantity = 50 | 100;=
+type Quantity = 50 | 100;
 let quantity: Quantity = 50;
 
 // also applies for strings
 type Metric = "cm" | "inch";
+
+//? Nullable
+// handles cases where returned value can be null or undefined
+function greet(name: string | null | undefined) {
+  if (name) {
+    console.log(name.toUpperCase());
+  } else console.log("Hola!:");
+}
+
+greet(undefined);
