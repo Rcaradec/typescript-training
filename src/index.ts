@@ -86,3 +86,11 @@ let textBox: UIWidget = {
   drag: () => {},
   resize: () => {},
 };
+
+//? Literal
+// literal means Exact, Specific
+type Quantity = 50 | 100;=
+let quantity: Quantity = 50;
+
+// also applies for strings
+type Metric = "cm" | "inch";
